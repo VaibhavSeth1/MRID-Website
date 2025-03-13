@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRID Headphones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Video Backgrounds -->
+    <video class="bg-video pc-video" autoplay loop muted playsinline>
+        <source src="./images/pc.mp4" type="video/mp4">
+    </video>
+
+    <video class="bg-video mobile-video" autoplay loop muted playsinline>
+        <source src="./images/mobile .mp4" type="video/mp4">
+    </video>
+
+    <!-- Glass Navbar -->
+    <nav class="navbar">
+        <div class="logo">MRID</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">&#9776;</div>
+    </nav>
+
+    <!-- Full-Screen Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="content">
+            <h1 class="brand-name">Mrid <br> Headphones</h1>
+            <p class="brand-info">
+                Experience sound in its purest form with MRID – Where softness meets precision.
+                Designed for those who appreciate rich, high-quality audio, our headphones deliver deep,
+                balanced tones with unparalleled comfort. Every note, every beat, and every whisper
+                comes to life as intended.
+            </p>
+            <a href="#shop-exclusive">
+                <button class="buy-now">Buy Now</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop-exclusive" class="shop">
+        <div class="shop-container">
+            <div id="headphone-name">
+                <h1>MRID PULSE</h1>
+            </div>
+
+            <img id="headphone-png" src="./images/headphone.png" alt="MRID Pulse Headphones">
+
+            <p>
+                Immerse in crystal-clear audio with deep, balanced bass, enhanced by cutting-edge noise cancellation for
+                an uninterrupted experience. Designed for all-day comfort, MRID PULSE features long battery life and
+                fast charging, so your music never stops.
+            </p>
+
+            <div class="shop-buttons">
+                <button id="btn-1">Buy Now</button>
+                <button id="btn-2">View More</button>
+            </div>
+        </div>
+    </section>
+
+    <script defer src="scripts.js"></script>
+
+</body>
+
+</html>
