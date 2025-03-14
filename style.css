@@ -290,10 +290,60 @@
   color: white;
 }
 
+/* Bootstrap Css */
+
+.products .btn {
+  border-radius: 50px !important; /* Fully rounded buttons */
+  padding: 10px 25px;
+  font-size: 1rem; /* Adjust padding for better spacing */
+}
+
+.btn-primary {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-secondary {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: black;
+  color: white;
+}
+
 /* 💡 Responsive Design */
 
-/* Common Styles for Tablet & Mobile Screens */
+/* Common Responsive Styles for Tablet & Mobile */
 @media (max-width: 1024px) {
+  .products img {
+    max-width: 45% !important;
+    margin-top: 20px;
+  }
+
+  .products h5 {
+    font-size: 1.2rem;
+  }
+
+  .products p {
+    font-size: 1rem;
+  }
+
+  .products .btn {
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+
   .navbar {
     padding: 15px 5%;
   }
@@ -319,7 +369,7 @@
     display: block;
   }
 
-  /* Adjust brand name & info for smaller screens */
+  /* Brand Name & Info */
   .brand-name {
     font-size: 5rem;
   }
@@ -350,13 +400,11 @@
   }
 
   .shop-container p {
-    position: relative;
     top: 90px;
     font-size: 1.2rem;
   }
 
   .shop-buttons {
-    position: relative;
     top: 100px;
     gap: 20px;
   }
