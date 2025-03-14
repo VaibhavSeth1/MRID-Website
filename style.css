@@ -298,13 +298,13 @@
   font-size: 1rem; /* Adjust padding for better spacing */
 }
 
-.btn-primary {
+.btn-buy {
   background: black;
   color: white;
   border: none;
 }
 
-.btn-primary:hover {
+.btn-buy:hover {
   background: white;
   color: black;
   border: 2px solid black;
