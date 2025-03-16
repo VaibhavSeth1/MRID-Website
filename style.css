@@ -271,7 +271,6 @@
 #btn-1:hover {
   background: white;
   color: black;
-  border: 2px solid black;
 }
 
 /* View More Button */
@@ -308,7 +307,7 @@
 .btn-buy:hover {
   background: white;
   color: black;
-  border: 2px solid black;
+
 }
 
 .btn-secondary {
@@ -561,7 +560,6 @@
   }
 }
 
-.buy-now:hover,
 #btn-1:hover,
 #btn-2:hover {
   animation: bounce 0.3s ease-in-out;
