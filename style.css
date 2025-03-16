@@ -1,0 +1,690 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+/* Video Background Styling */
+.bg-video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Hide Mobile Video by Default */
+.mobile-video {
+  display: none;
+}
+
+/* Glassmorphic Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.29);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.3s ease-in-out;
+}
+
+/* Logo */
+.logo {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  z-index: 1000;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: royalblue;
+}
+
+/* Mobile Menu (Hamburger) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Full-Screen Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.29);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show Menu When Active */
+.mobile-menu.active {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Mobile Menu Links */
+.mobile-menu a {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+/* Glowing Effect on Hover */
+.mobile-menu a:hover {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(65, 105, 225, 0.5),
+    0 0 20px rgba(65, 105, 225, 0.4), 0 0 40px rgba(65, 105, 225, 0.3),
+    0 0 80px rgba(255, 255, 255, 0.6);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 90%;
+  max-width: 1600px;
+}
+
+/* Content */
+.content {
+  max-width: 90%;
+}
+
+/* Brand Name */
+.brand-name {
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* Brand Info */
+.brand-info {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  max-width: 1200px;
+}
+
+/* Buy Now Button */
+.buy-now {
+  width: 220px;
+  height: 65px;
+  border-radius: 50px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.buy-now:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Shop Section */
+.shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shop Container */
+.shop-container {
+  position: relative;
+  max-width: 70%;
+  width: 90%;
+}
+
+/* Headphone Name */
+#headphone-name h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 9rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  top: -50px;
+  z-index: 1;
+}
+
+/* Headphone Image */
+#headphone-png {
+  width: 600px;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Description */
+.shop-container p {
+  position: relative;
+  top: 220px;
+  font-size: 1.5rem;
+  color: black;
+  max-width: 1800px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+/* Buttons */
+.shop-buttons {
+  position: relative;
+  top: 240px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Buy Now Button */
+#btn-1 {
+  background: black;
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#btn-1:hover {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/* View More Button */
+#btn-2 {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#btn-2:hover {
+  background: black;
+  color: white;
+}
+
+/* Bootstrap Css */
+
+.products .btn {
+  border-radius: 50px !important; /* Fully rounded buttons */
+  padding: 10px 25px;
+  font-size: 1rem; /* Adjust padding for better spacing */
+}
+
+.btn-buy {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.btn-buy:hover {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-secondary {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: black;
+  color: white;
+}
+
+/* 💡 Responsive Design */
+
+/* Common Responsive Styles for Tablet & Mobile */
+@media (max-width: 1024px) {
+  .products img {
+    max-width: 45% !important;
+    margin-top: 20px;
+  }
+
+  .products h5 {
+    font-size: 1.2rem;
+  }
+
+  .products p {
+    font-size: 1rem;
+  }
+
+  .products .btn {
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .pc-video {
+    display: none;
+  }
+
+  .mobile-video {
+    display: block;
+  }
+
+  /* Brand Name & Info */
+  .brand-name {
+    font-size: 5rem;
+  }
+
+  .brand-info {
+    font-size: 1.4rem;
+  }
+
+  /* Buy Now Button */
+  .buy-now {
+    width: 200px;
+    height: 60px;
+    font-size: 1.3rem;
+  }
+
+  /* Shop Section */
+  .shop-container {
+    max-width: 90%;
+  }
+
+  #headphone-name h1 {
+    font-size: 4rem;
+  }
+
+  #headphone-png {
+    width: 350px;
+    top: 15%;
+  }
+
+  .shop-container p {
+    top: 90px;
+    font-size: 1.2rem;
+  }
+
+  .shop-buttons {
+    top: 100px;
+    gap: 20px;
+  }
+
+  #btn-1,
+  #btn-2 {
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+}
+
+/* Mobile Screens (Tablets & Phones) */
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: 4rem;
+  }
+
+  .brand-info {
+    font-size: 1.3rem;
+  }
+
+  .buy-now {
+    width: 180px;
+    height: 55px;
+    font-size: 1.2rem;
+  }
+
+  #headphone-name h1 {
+    font-size: 3.5rem;
+  }
+
+  #headphone-png {
+    width: 300px;
+    top: 10%;
+  }
+
+  .shop-container p {
+    font-size: 1.1rem;
+    top: 80px;
+  }
+
+  .shop-buttons {
+    top: 90px;
+  }
+}
+
+/* Small Mobile Screens (Phones) */
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 3rem;
+  }
+
+  .brand-info {
+    font-size: 1.2rem;
+  }
+
+  .buy-now {
+    width: 160px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  #headphone-name h1 {
+    font-size: 3rem;
+  }
+
+  #headphone-png {
+    width: 250px;
+    top: 5%;
+  }
+
+  .shop-container p {
+    font-size: 1rem;
+    top: 70px;
+  }
+
+  .shop-buttons {
+    top: 80px;
+  }
+}
+
+/* Animations */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand-name {
+  animation: fadeSlideUp 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(65, 105, 225, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.logo {
+  animation: glowing 2s infinite alternate ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links li {
+  animation: slideDown 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Apply delay to each link */
+.nav-links li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.nav-links li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.nav-links li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.nav-links li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.buy-now:hover,
+#btn-1:hover,
+#btn-2:hover {
+  animation: bounce 0.3s ease-in-out;
+}
+
+/* Fade-in and Slide-up Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation to Brand Info */
+.brand-info {
+  animation: fadeSlideUp 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Apply Animation to Buy Now Button */
+.buy-now {
+  animation: fadeSlideUp 1.2s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+/* Fade-in and Slide-up Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation to Shop Tagline */
+.shop-tagline {
+  animation: fadeSlideUp 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Apply Animation to Shop Description */
+.text-center {
+  animation: fadeSlideUp 1.2s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+/* Fade-in and Slide-up Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation to Heading */
+.text-center.mb-4 {
+  animation: fadeSlideUp 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Apply Animation to Paragraph */
+.text-center:not(.mb-4) {
+  animation: fadeSlideUp 1.2s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate Contact Heading */
+.contact h2 {
+  animation: fadeSlideUp 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Animate Contact Description */
+.contact p {
+  animation: fadeSlideUp 1.2s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+/* Animate Contact Form */
+.contact-form {
+  animation: fadeSlideUp 1.5s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+/* Animate Contact Info */
+.contact-info {
+  animation: fadeSlideUp 1.7s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.7s;
+}
+
+/* Social Icons */
+.social-links a img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover img {
+  transform: scale(1.2);
+}
