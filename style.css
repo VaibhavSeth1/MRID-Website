@@ -537,7 +537,7 @@
   opacity: 0;
 }
 
-/* Apply delay to each link */
+
 .nav-links li:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -579,13 +579,13 @@
   }
 }
 
-/* Apply Animation to Brand Info */
+/*Animation Brand Info */
 .brand-info {
   animation: fadeSlideUp 1s ease-in-out forwards;
   opacity: 0;
 }
 
-/* Apply Animation to Buy Now Button */
+/* Animation Buy Now Button */
 .buy-now {
   animation: fadeSlideUp 1.2s ease-in-out forwards;
   opacity: 0;
@@ -604,13 +604,13 @@
   }
 }
 
-/* Apply Animation to Shop Tagline */
+/* Animation  Shop Tagline */
 .shop-tagline {
   animation: fadeSlideUp 1s ease-in-out forwards;
   opacity: 0;
 }
 
-/* Apply Animation to Shop Description */
+/* Animation  Shop Description */
 .text-center {
   animation: fadeSlideUp 1.2s ease-in-out forwards;
   opacity: 0;
@@ -629,13 +629,13 @@
   }
 }
 
-/* Apply Animation to Heading */
+/* Animation Heading */
 .text-center.mb-4 {
   animation: fadeSlideUp 1s ease-in-out forwards;
   opacity: 0;
 }
 
-/* Apply Animation to Paragraph */
+/*  Animation  Paragraph */
 .text-center:not(.mb-4) {
   animation: fadeSlideUp 1.2s ease-in-out forwards;
   opacity: 0;
